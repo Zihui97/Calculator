@@ -59,7 +59,7 @@ function equate () {
         displayBottom.textContent = result;
         displayTop.textContent = ""
         second = ""
-        first = ""
+        first = result
         operator = ""
     }
 }
@@ -78,6 +78,7 @@ let backspace = document.querySelector(".backspace")
 backspace.addEventListener("click", back)
 function back () {
     if (first !== "") {
+        first = first.toString();
         let length = first.length;
         first = first.slice(0, length - 1);
         displayBottom.textContent = first
