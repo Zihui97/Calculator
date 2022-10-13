@@ -1,0 +1,34 @@
+body {
+    background: peachpuff;
+}
+
+.header {
+    display: flex;
+    margin: 50px;
+    margin-left: 45vw;
+}
+
+.resultScreen {
+    background-color: white;
+    border: 2px solid black;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    padding: 20px;
+    text-align: right;
+}
+
+.buttons1, .buttons2, .buttons3, .buttons4 {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons1 {
+    margin-top: 20px;
+}
+
+.number, .operator, .equate, .decimal {
+    width: 80px;
+    height: 80px;
+    font-weight: bolder;
+    font-size: large;
+}
