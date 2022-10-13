@@ -11,7 +11,9 @@ body {
 .resultScreen {
     background-color: white;
     border: 2px solid black;
-    margin-left: 30vw;
+    height: 20px;
+    width: 285px;
+    margin-left: 41vw;
     margin-right: 30vw;
     padding: 20px;
     text-align: right;
@@ -30,7 +32,7 @@ body {
     font-weight: bold;
 }
 
-.buttons1, .buttons2, .buttons3, .buttons4 {
+.buttons1, .buttons2, .buttons3, .buttons4, .buttons5{
     display: flex;
     justify-content: center;
 }
@@ -39,7 +41,7 @@ body {
     margin-top: 20px;
 }
 
-.number, .operator, .equate, .decimal {
+.number, .operator, .equate, .decimal, .cancel, .backspace {
     width: 80px;
     height: 80px;
     font-weight: bolder;

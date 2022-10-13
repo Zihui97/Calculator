@@ -34,8 +34,10 @@ let equatebtn = document.querySelector (".equate");
 equatebtn.addEventListener("click", equate);
 function equate () {
     let result
-    if (first === "") {displayBottom.textContent = 696969} else {
     switch(operator) {
+        case "":
+            displayBottom.textContent = "You need to press an operator";
+            break;
         case "/":
             result = second / first; 
             break;
@@ -49,14 +51,37 @@ function equate () {
             break;
         
         case "+":
-            result = second + first;
+            result = Number(second) + Number(first);
             break;
-    }}
-    displayBottom.textContent = result;
-    displayTop.textContent = ""
-    second = ""
+    }
+
+    if (operator) {
+        displayBottom.textContent = result;
+        displayTop.textContent = ""
+        second = ""
+        first = ""
+        operator = ""
+    }
+}
+
+let cancel = document.querySelector(".cancel");
+cancel.addEventListener("click", cancelled);
+function cancelled() {
     first = ""
+    second = ""
     operator = ""
+    displayTop.textContent = ""
+    displayBottom.textContent = ""
+}
+
+let backspace = document.querySelector(".backspace") 
+backspace.addEventListener("click", back)
+function back () {
+    if (first !== "") {
+        let length = first.length;
+        first = first.slice(0, length - 1);
+        displayBottom.textContent = first
+    }
 }
 
 
